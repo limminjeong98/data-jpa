@@ -5,10 +5,10 @@ import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MemberRepository {
+public class MemberJpaRepository {
 
     @PersistenceContext
-    EntityManager em;
+    private EntityManager em;
 
     public Member save(Member member) {
         em.persist(member);
